@@ -37,7 +37,7 @@ class TournamentController extends Controller
         for ($i=0; $i<=count($sort); $i++) {
             if ($i % 2 != 0 && $i != 0 ) {
                 $victory[$l] = $final[rand(0, 1)];
-                $l++;
+                $l;
             }
         }
 
