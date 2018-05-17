@@ -13,9 +13,8 @@ class TournamentController extends Controller
         $em = $this->getDoctrine()->getManager();
         $countries = $em->getRepository("AppBundle:Country")->findAll();
         shuffle($countries);
+      
         $sort= array();
-
-
         $j=0;
         for ($i=0; $i<=count($countries); $i++) {
             if ($i % 2 == 0 && $i != 0 ) {
