@@ -1,5 +1,5 @@
 {% extends 'base.html.twig' %}
-
+{% block body %}
 <head>
 
     <meta charset="utf-8">
@@ -10,14 +10,14 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Herr+Von+Muellerhoff' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Istok+Web|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
-    <title>March Madness Stock Matchup</title>
+    <title>hackathon 2</title>
 </head>
 
 {% block stylesheets %}
     {{ parent() }}
-    <link rel="stylesheet" href="{{ asset('asset/css/index.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" type="text/css">
 {% endblock %}
-{% block body %}
+
 
 <body>
 <header class="hero">
@@ -25,7 +25,7 @@
         <p class="intro" id="intro">GLADIATOR</p>
         <h1 id="headline">Tournament</h1>
         <p class="year"><i class="fa fa-star"></i> 2018 <i class="fa fa-star"></i></p>
-        <p>Hackathon event</p>
+        <p>Special hackathon event</p>
     </div>
 </header>
 
