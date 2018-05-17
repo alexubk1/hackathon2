@@ -19,7 +19,7 @@ class TournamentController extends Controller
 
 
 
-        return $this->render('tournament/index.html.twig', array(
+        return $this->render('default/index.html.twig', array(
             'countries' => $countries,
         ));
     }

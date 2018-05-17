@@ -7,7 +7,7 @@
         <tbody>
         {% for country in countries %}
             <tr>
-                <td>{{ country.name }}</td>
+                <td><a href="{{ path('gaulois_index') }}">{{ country.name }}</td>
             </tr>
         {% endfor %}
         </tbody>
@@ -16,6 +16,5 @@
         <li>
             <a href="{{ path('country_index') }}">Vous souhaitez vous faire défoncer, inscrivez votre pays!</a>
         </li>
-
     </ul>
 {% endblock %}
