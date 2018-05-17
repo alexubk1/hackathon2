@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Countries list</h1>
+
+    <table>
+        <tbody>
+        {% for country in countries %}
+            <tr>
+                <td>{{ country.name }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <ul>
+        <li>
+            <a href="{{ path('country_index') }}">Vous souhaitez vous faire défoncer, inscrivez votre pays!</a>
+        </li>
+
+    </ul>
+{% endblock %}
