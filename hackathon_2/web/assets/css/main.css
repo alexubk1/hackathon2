@@ -1,4 +1,4 @@
-body {font-family: 'Istok Web', sans-serif;background: url("http://www.fondsecran.eu/pictures/2012/0902/1/gladiator-tv-series-spartacus-gods-of-the-arena-swords-naher23nada-pics-197653.jpg") no-repeat ;background-size: 100%}
+body {font-family: 'Istok Web', sans-serif;background: url("http://www.fondsecran.eu/pictures/2012/0902/1/gladiator-tv-series-spartacus-gods-of-the-arena-swords-naher23nada-pics-197653.jpg") no-repeat ;background-size: cover}
 .hero {position:relative; text-align: center; overflow: hidden; color: #fcfcfc; }
 .hero h1 {font-family: 'Holtwood One SC', serif;font-weight: normal;font-size: 5.4em;margin:0 0 20px; text-shadow:0 0 12px rgba(0, 0, 0, 0.5);text-transform: uppercase;letter-spacing:-1px;}
 .hero p {font-family: 'Abel', sans-serif;text-transform: uppercase; color: #1b1b1b; letter-spacing: 6px;text-shadow:0 0 12px rgba(156, 0, 39, 0.5);font-size: 1.6em;}
@@ -6,29 +6,30 @@ body {font-family: 'Istok Web', sans-serif;background: url("http://www.fondsecra
 .hero p.intro {font-family: 'Holtwood One SC', serif;text-transform: uppercase;letter-spacing: 1px;font-size: 3em;margin-bottom:-40px; color: #000000;}
 .hero p.year {color: #fff; letter-spacing: 20px; font-size: 34px; margin: -25px 0 25px;}
 .hero p.year i {font-size: 14px;vertical-align: middle;}
-#bracket {overflow:hidden;background-color: #e1e1e1;background-color:rgba(225,225,225,0.9);padding-top: 20px;font-size: 12px;padding: 40px 0;}
+#bracket {overflow:hidden;background-color: #E1E1E1;background-color:rgba(225,225,225,0.9);padding-top: 20px;padding: 40px 0;}
 .container {max-width: 1100px;margin: 0 auto;display:block;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: -webkit-flex;display: flex;-webkit-flex-direction:row;flex-direction: row;}
-.split {display:block;float:left;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display:flex;width: 42%;-webkit-flex-direction:row;-moz-flex-direction:row;flex-direction:row;}
+.split {display:block;float:left;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display:flex;width: 100%;-webkit-flex-direction:row;-moz-flex-direction:row;flex-direction:row;}
 .champion {float:left;display:block;width: 16%;-webkit-flex-direction:row;flex-direction:row;-webkit-align-self:center;align-self:center;margin-top: -15px;text-align: center;padding: 230px 0\9;}
-.champion i {color: #a0a6a8; font-size: 45px;padding: 10px 0; }
+.champion i {color: #A0A6A8; font-size: 45px;padding: 10px 0; }
 .round {display:block;float:left;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;width:95%;width:30.8333%\9;}
 .split-two {}
 .split-one .round {margin: 0 2.5% 0 0;}
 .split-two .round {margin: 0 0 0 2.5%;}
-.matchup {margin:0;width: 100%;padding: 10px 0;height:60px;-webkit-transition: all 0.2s;transition: all 0.2s;}
-.score {font-size: 11px;text-transform: uppercase;float: right;color: #2C7399;font-weight: bold;font-family: 'Roboto Condensed', sans-serif;position: absolute;right: 5px;}
-.team {padding: 0 5px;margin: 3px 0;height: 25px; line-height: 25px;white-space: nowrap; overflow: hidden;position: relative;}
-.round-two .matchup {margin:0; height: 60px;padding: 50px 0;}
-.round-three .matchup {margin:0; height: 60px; padding: 130px 0;}
+.matchup {margin:0;width: 100%;padding: 10px 0;-webkit-transition: all 0.2s;transition: all 0.2s;}
+.score {text-transform: uppercase;float: right;color: #2C7399;font-weight: bold;font-family: 'Roboto Condensed', sans-serif;position: absolute;right: 5px;}
+.team {padding: 0 5px;margin: 3px 0;height: 45px; line-height: 45px;white-space: nowrap; overflow: hidden;position: relative;}
+.round-two .matchup {margin:0; height: 125px;padding: 60px 0;}
+.round-three .matchup {margin:0; height: 60px; padding: 180px 0;}
 .round-details {font-family: 'Roboto Condensed', sans-serif; font-size: 13px; color: #2C7399;text-transform: uppercase;text-align: center;height: 40px;}
-.champion li, .round li {background-color: #fff;box-shadow: none; opacity: 0.45;}
+.champion li, .round li {background-color: #FFF;box-shadow: none;}
 .current li {opacity: 1;}
-.current li.team {background-color: #fff;box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);opacity: 1;}
+.current li.team {background-color: #FFF;box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);opacity: 1;}
 .vote-options {display: block;height: 52px;}
 .share .container {margin: 0 auto; text-align: center;}
-.share-icon {font-size: 24px; color: #fff;padding: 25px;}
+.share-icon {font-size: 24px; color: #FFF;padding: 25px;}
 .share-wrap {max-width: 1100px; text-align: center; margin: 60px auto;}
 .final {margin: 4.5em 0;}
+.team-top {margin-top: 30px;}
 
 @-webkit-keyframes pulse {
     0% {
@@ -67,16 +68,14 @@ body {font-family: 'Istok Web', sans-serif;background: url("http://www.fondsecra
     }
 }
 
-.share-icon {color: #fff; opacity: 0.35; }
-.share-icon:hover { opacity:1;  -webkit-animation: pulse 0.5s; animation: pulse 0.5s;}
+.share-icon {color: #FFF; opacity: 0.35; }
+.share-icon:hover { opacity:1; -webkit-animation: pulse 0.5s; animation: pulse 0.5s;}
 .date {font-size: 10px; letter-spacing: 2px;font-family: 'Istok Web', sans-serif;color:#3F915F;}
-
-
 
 @media screen and (min-width: 981px) and (max-width: 1099px) {
     .container {margin: 0 1%;}
     .champion {width: 14%;}
-    .split {width:43%; }
+    .split {width:100%; }
     .split-one .vote-box {margin-left: 138px;}
     .hero p.intro {font-size: 28px;}
     .hero p.year {margin: 5px 0 10px;}
@@ -87,7 +86,7 @@ body {font-family: 'Istok Web', sans-serif;background: url("http://www.fondsecra
     .container {-webkit-flex-direction:column;-moz-flex-direction:column;flex-direction:column;}
     .split, .champion {width: 90%;margin: 35px 5%;}
     .champion {-webkit-box-ordinal-group:3;-moz-box-ordinal-group:3;-ms-flex-order:3;-webkit-order:3;order:3;}
-    .split {border-bottom: 1px solid #b6b6b6; padding-bottom: 20px;}
+    .split {border-bottom: 1px solid #B6B6B6; padding-bottom: 20px;}
     .hero p.intro {font-size: 24px;}
     .hero h1 {font-size: 3em; margin: 15px 0;}
     .hero p {font-size: 1em;}
@@ -104,5 +103,4 @@ body {font-family: 'Istok Web', sans-serif;background: url("http://www.fondsecra
     .round-details {font-size: 90%;}
     .hero-wrap {padding: 2.5em;}
     .hero p.year {margin: 5px 0 10px; font-size: 18px;}
-
 }

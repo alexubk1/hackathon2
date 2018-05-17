@@ -19,7 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `hack2`
 --
-
+CREATE DATABASE IF NOT EXISTS `hack2` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+USE `hack2`;
 -- --------------------------------------------------------
 
 --
