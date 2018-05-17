@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Gladiators list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Job</th>
+                <th>Weapon</th>
+                <th>Captain</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for gladiator in gladiators %}
+            <tr>
+                <td><a href="{{ path('gladiator_show', { 'id': gladiator.id }) }}">{{ gladiator.id }}</a></td>
+                <td>{{ gladiator.name }}</td>
+                <td>{{ gladiator.age }}</td>
+                <td>{{ gladiator.job }}</td>
+                <td>{{ gladiator.weapon }}</td>
+                <td>{% if gladiator.captain %}Yes{% else %}No{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('gladiator_show', { 'id': gladiator.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('gladiator_edit', { 'id': gladiator.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('gladiator_new') }}">Create a new gladiator</a>
+        </li>
+    </ul>
+{% endblock %}
