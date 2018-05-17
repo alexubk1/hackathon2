@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Team : PSG !</h1>
+
+    <table>
+        <tbody>
+
+        {% for gladiator in psg %}
+            <tr>
+                <td><a href="{{ path('psg_index') }}">{{ gladiator.name }}</td>
+            </tr>
+            <tr>
+                <td>{% if gladiator.captain %}C'est moi le boss{% else %}Je suis soumis{% endif %}</td>
+            </tr>
+            <tr>
+                <td>Role : {{ gladiator.job }}</td>
+            </tr>
+            <tr>
+                <td>Arme : {{ gladiator.weapon }}</td>
+            </tr>
+        {% endfor %}
+
+
+        </tbody>
+    </table>
+    <ul>
+        <li>
+            <a href="{{ path('gladiator_index') }}">Engagez-vous....qu'ils disaient!</a>
+        </li>
+
+    </ul>
+{% endblock %}
