@@ -12,7 +12,7 @@ class TournamentController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $countries = $em->getRepository("AppBundle:Country")->findAll();
-        return $this->render('default/index.html.twig', array(
+        return $this->render('tournament/index.html.twig', array(
             'countries' => $countries,
         ));
     }
