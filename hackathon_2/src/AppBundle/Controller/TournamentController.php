@@ -1,4 +1,10 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: b0ndurant
+ * Date: 17/05/18
+ * Time: 16:07
+ */
 
 namespace AppBundle\Controller;
 
@@ -6,10 +12,11 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class DefaultController extends Controller
+
+class TournamentController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/tournament", name="tournament")
      */
     public function indexAction(Request $request)
     {
