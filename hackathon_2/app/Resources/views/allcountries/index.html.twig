@@ -1,20 +1,19 @@
 {% extends 'base.html.twig' %}
-
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
 {% block body %}
-    <h1>Countries list</h1>
-
-    <table>
-        <tbody>
-        {% for country in countries %}
-            <tr>
-                <td><a href="{{ path('gaulois_index') }}">{{ country.name }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-    <ul>
-        <li>
-            <a href="{{ path('country_index') }}">Vous souhaitez vous faire défoncer, inscrivez votre pays!</a>
-        </li>
-    </ul>
+    <h1 class="country-title">Countries list</h1>
+    <div class="container">
+        <div class="row">
+            {% for country in countries %}
+                <div class="col-md-3">
+                    <div class="country-display"><a href="{{ path('gaulois_index') }}">{{ country.name }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="redirection-countrie">
+        <a href="{{ path('country_index') }}">Vous souhaitez vous faire défoncer, inscrivez votre pays!</a>
+    </div>
 {% endblock %}

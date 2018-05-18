@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:3306
--- Généré le :  Jeu 17 Mai 2018 à 13:21
+-- Généré le :  Ven 18 Mai 2018 à 12:41
 -- Version du serveur :  5.7.22-0ubuntu0.17.10.1
 -- Version de PHP :  7.1.17-0ubuntu0.17.10.1
 
@@ -19,8 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `hack2`
 --
-CREATE DATABASE IF NOT EXISTS `hack2` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
-USE `hack2`;
+
 -- --------------------------------------------------------
 
 --
@@ -29,22 +28,23 @@ USE `hack2`;
 
 CREATE TABLE `country` (
   `id` int(11) NOT NULL,
-  `name` varchar(32) COLLATE utf8_unicode_ci NOT NULL
+  `name` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
+  `flag` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Contenu de la table `country`
 --
 
-INSERT INTO `country` (`id`, `name`) VALUES
-(1, 'Gaule'),
-(2, 'Troie'),
-(3, 'Perse'),
-(4, 'Sparte'),
-(5, 'Viking'),
-(6, 'Maori'),
-(7, 'PSG'),
-(8, 'OM');
+INSERT INTO `country` (`id`, `name`, `flag`) VALUES
+(1, 'Gaule', 'http://www.cigarety.by/img/SG0000153.jpg'),
+(2, 'Troie', 'https://i.pinimg.com/originals/e2/08/51/e208512923ba494fb2f9ae3ff12fdb4d.jpg'),
+(3, 'Perse', 'http://www.lespersiennes.com/wp-content/uploads/2014/10/Capture-d%E2%80%99%C3%A9cran-2014-10-30-%C3%A0-18.08.30.png'),
+(4, 'Sparte', 'https://s2-ssl.dmcdn.net/HcHn/x1080--rq.jpg'),
+(5, 'Viking', 'https://i.pinimg.com/originals/dc/e2/7a/dce27abe15250f81e8464abfab5b9924.jpg'),
+(6, 'Maori', 'http://static.flickr.com/101/252653476_d16a641b50.jpg'),
+(7, 'PSG', 'https://i2.wp.com/www.photos-a-la-con.fr/wp-content/uploads/2014/07/image-drole-psg.jpg?resize=600%2C363'),
+(8, 'OM', 'http://img15.hostingpics.net/pics/212100Image3.jpg');
 
 -- --------------------------------------------------------
 
