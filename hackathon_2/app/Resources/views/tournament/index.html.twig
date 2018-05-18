@@ -3,7 +3,6 @@
 {% block stylesheets %}
     {{ parent() }}
 {% endblock %}
-
 {% block body %}
 <body>
 <header class="hero">
@@ -33,7 +32,6 @@
                     {% endfor %}
                 </ul>
             </div>	<!-- END ROUND ONE -->
-
             <div class="round round-two">
                 <div class="round-details">Round 2<br/></div>
                 <ul class="matchup wow zoomIn" data-wow-delay="4s">
@@ -53,14 +51,14 @@
                         <li class="team team-top">{{ country.name }}<span class="score">&nbsp;</span></li>
                     {% endfor %}
                 </ul>
-                <div class="round round-4">
-                    <div class="round-details">Round 4<br/></div>
-                    <ul class="matchup">
-                        {% for country in victory  %}
-                            <li class="team team-top">{{ country.name }}<span class="score">&nbsp;</span></li>
-                        {% endfor %}
-                    </ul>
-                </div>
+            </div> 
+            <!-- END ROUND THREE -->
+            <div class="round-4">
+                <ul class="matchup">
+                    {% for country in victory  %}
+                    <li class="team-top-victory">victoire<br/> {{ country.name }}</li>
+                </ul>
+                {% endfor %}
             </div>
         </div>
     </div>
