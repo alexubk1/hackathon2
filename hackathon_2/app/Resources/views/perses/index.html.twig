@@ -3,31 +3,41 @@
 {% block body %}
     <h1>Team : PERSE !</h1>
 
-    <table>
-        <tbody>
 
-        {% for gladiator in perses %}
-            <tr>
-                <td><a href="{{ path('perses_index') }}">{{ gladiator.name }}</td>
-            </tr>
-            <tr>
-                <td>{% if gladiator.captain %}C'est moi le boss{% else %}Je suis soumis{% endif %}</td>
-            </tr>
-            <tr>
-                <td>Role : {{ gladiator.job }}</td>
-            </tr>
-            <tr>
-                <td>Arme : {{ gladiator.weapon }}</td>
-            </tr>
-        {% endfor %}
+    <div class="row">
+        <div class="col-md-6">
+
+            <table>
+                <tbody>
+
+                {% for gladiator in perses %}
+                    <tr>
+                        <td><a href="{{ path('perses_index') }}">{{ gladiator.name }}</td>
+                    </tr>
+                    <tr>
+                        <td>{% if gladiator.captain %}C'est moi le boss{% else %}Je suis soumis{% endif %}</td>
+                    </tr>
+                    <tr>
+                        <td>Role : {{ gladiator.job }}</td>
+                    </tr>
+                    <tr>
+                        <td>Arme : {{ gladiator.weapon }}</td>
+                    </tr>
+                {% endfor %}
 
 
-        </tbody>
-    </table>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <img src="{{ asset('https://media.giphy.com/media/pcnqQyYnXZkME/giphy.gif') }}" alt="Xerxès" />
+        </div>
+    </div>
     <ul>
         <li>
             <a href="{{ path('gladiator_index') }}">Engagez-vous....qu'ils disaient!</a>
         </li>
 
     </ul>
+
 {% endblock %}
