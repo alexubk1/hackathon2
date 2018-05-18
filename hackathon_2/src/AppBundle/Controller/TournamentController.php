@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Request;
 class TournamentController extends Controller
 {
     /**
-     * @Route("/tournament", name="tournament")
+     * @Route("/tournament", name="tournament_index")
      */
     public function indexAction(Request $request)
     {
