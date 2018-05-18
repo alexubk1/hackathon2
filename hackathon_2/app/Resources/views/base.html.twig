@@ -7,6 +7,7 @@
         <title>{% block title %}March Madness Stock Matchup{% endblock %}</title>
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" type="text/css">
+            <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}" type="text/css">
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -17,7 +18,10 @@
 
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block body %}
+        {% endblock %}
+        {% block javascripts %}
+       <script> screen&&screen.width>767&&(document.write('<script type="text/javascript" src="/assets/js/wow.min.js"><\/script>'),document.write("<script>new WOW().init()<\/script>")); </script>
+        {% endblock %}
     </body>
 </html>
