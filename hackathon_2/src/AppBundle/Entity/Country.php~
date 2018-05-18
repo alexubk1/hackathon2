@@ -12,11 +12,14 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Country
 {
+    public function __toString()
+    {
+        return $this->name;
+    }
     /**
      * @ORM\OneToMany(targetEntity="AppBundle\Entity\Gladiator", mappedBy="state")
      */
     private $states;
-
 
     /**
      * @var int
@@ -40,6 +43,12 @@ class Country
      *
      * @return int
      */
+
+    /**
+     * @ORM\Column(name="flag", type="string", length=255)
+     */
+    private $flag;
+
     public function getId()
     {
         return $this->id;
@@ -67,5 +76,48 @@ class Country
     public function getName()
     {
         return $this->name;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->states = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add state.
+     *
+     * @param \AppBundle\Entity\Gladiator $state
+     *
+     * @return Country
+     */
+    public function addState(\AppBundle\Entity\Gladiator $state)
+    {
+        $this->states[] = $state;
+
+        return $this;
+    }
+
+    /**
+     * Remove state.
+     *
+     * @param \AppBundle\Entity\Gladiator $state
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeState(\AppBundle\Entity\Gladiator $state)
+    {
+        return $this->states->removeElement($state);
+    }
+
+    /**
+     * Get states.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getStates()
+    {
+        return $this->states;
     }
 }
