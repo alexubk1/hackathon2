@@ -6,71 +6,71 @@
 {% block body %}
 
     <body>
-    <header class="hero">
-        <div class="hero-wrap">
-            <p class="intro" id="intro">GLADIATOR</p>
-            <h1 id="headline">Tournament</h1>
-            <p class="year"><i class="fa fa-star"></i> 2018 <i class="fa fa-star"></i></p>
-            <p>Special hackathon event</p>
-        </div>
-    </header>
+<header class="hero">
+    <div class="hero-wrap">
+        <p class="intro" id="intro">GLADIATOR</p>
+        <h1 id="headline">Tournament</h1>
+        <p class="year"><i class="fa fa-star"></i> 2018 <i class="fa fa-star"></i></p>
+        <p>Special hackathon event</p>
+    </div>
+</header>
 
 
 <section id="bracket">
     <div class="container">
 
-    <div class="split split-one">
-    <div class="round round-one current">
-        <div class="round-details">Round 1<br/></div>
-        <ul class="matchup">
-            {% for country in countries %}
-                {% if loop.index0 is even %}
-            <ul class="matchup">
-                    <li class="team team-top">{{ country.name }}</li>
-                {% else %}
-                    <li class="team team-bottom">{{ country.name }}</li>
-                {% endif %}
+        <div class="split split-one">
+            <div class="round round-one current">
+                <div class="round-details">Round 1<br/></div>
+                <ul class="matchup">
+                    {% for country in countries %}
+                        {% if loop.index0 is even %}
+                            <ul class="matchup">
+                            <li class="team team-top">{{ country.name }}</li>
+                        {% else %}
+                            <li class="team team-bottom">{{ country.name }}</li>
+                        {% endif %}
+                        </ul>
+                    {% endfor %}
                 </ul>
-            {% endfor %}
-        </ul>
-    </div>	<!-- END ROUND ONE -->
+            </div>	<!-- END ROUND ONE -->
 
-        <div class="round round-two">
-            <div class="round-details">Round 2<br/></div>
-            <ul class="matchup">
+            <div class="round round-two">
+                <div class="round-details">Round 2<br/></div>
+                <ul class="matchup">
 
-            {% for country in sort  %} <br> <br>
-                <li class="team team-top">{{ country.name }}<span class="score">&nbsp;</span></li>
-            {% endfor %}
-            </ul>
-        </div><!-- END ROUND TWO -->
+                    {% for country in sort  %} <br> <br>
+                        <li class="team team-top">{{ country.name }}<span class="score">&nbsp;</span></li>
+                    {% endfor %}
+                </ul>
+            </div><!-- END ROUND TWO -->
 
-        <div class="round round-three">
-            <div class="round-details">Round 2<br/></div>
-            <ul class="matchup">
-                {% for country in final  %}
-                    <br>
-                    <br>
-                <li class="team team-top">{{ country.name }}<span class="score">&nbsp;</span></li>
+            <div class="round round-three">
+                <div class="round-details">Round 2<br/></div>
+                <ul class="matchup">
+                    {% for country in final  %}
+                        <br>
+                        <br>
+                        <li class="team team-top">{{ country.name }}<span class="score">&nbsp;</span></li>
 
-            {% endfor %}
-            </ul>
-            <div class="round round-4">
-                <div class="round-details">Round 4<br/></div>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="round-4">
                 <ul class="matchup">
                     {% for country in victory  %}
-                    <li class="team team-top">{{ country.name }}<span class="score">&nbsp;</span></li>
+                    <li class="team-top-victory">victoire<br/> {{ country.name }}</li>
                 </ul>
                 {% endfor %}
-        </div>	<!-- END ROUND THREE -->
+            </div>	<!-- END ROUND THREE -->
         </div>
-        </div>
-        </section>
-        <section class="share">
-            <div class="share-wrap">
-                <a class="share-icon" href="https://twitter.com/basement47"><i class="fa fa-twitter"></i></a>
-                <a class="share-icon" href="#"><i class="fa fa-facebook"></i></a>
-                <a class="share-icon" href="#"><i class="fa fa-envelope"></i></a>
-            </div>
-        </section>
-        {% endblock %}
+    </div>
+</section>
+<section class="share">
+    <div class="share-wrap">
+        <a class="share-icon" href="https://twitter.com/basement47"><i class="fa fa-twitter"></i></a>
+        <a class="share-icon" href="#"><i class="fa fa-facebook"></i></a>
+        <a class="share-icon" href="#"><i class="fa fa-envelope"></i></a>
+    </div>
+</section>
+{% endblock %}

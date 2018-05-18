@@ -8,7 +8,7 @@ body {font-family: 'Istok Web', sans-serif;background: url("http://www.fondsecra
 .hero p.year i {font-size: 14px;vertical-align: middle;}
 #bracket {overflow:hidden;background-color: #E1E1E1;background-color:rgba(225,225,225,0.9);padding-top: 20px;padding: 40px 0;}
 .container {max-width: 1100px;margin: 0 auto;display:block;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: -webkit-flex;display: flex;-webkit-flex-direction:row;flex-direction: row;}
-.split {display:block;float:left;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display:flex;width: 100%;-webkit-flex-direction:row;-moz-flex-direction:row;flex-direction:row;}
+.split {z-index:0;display:block;float:left;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display:flex;width: 100%;-webkit-flex-direction:row;-moz-flex-direction:row;flex-direction:row;}
 .champion {float:left;display:block;width: 16%;-webkit-flex-direction:row;flex-direction:row;-webkit-align-self:center;align-self:center;margin-top: -15px;text-align: center;padding: 230px 0\9;}
 .champion i {color: #A0A6A8; font-size: 45px;padding: 10px 0; }
 .round {display:block;float:left;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;width:95%;width:30.8333%\9;}
@@ -20,8 +20,14 @@ body {font-family: 'Istok Web', sans-serif;background: url("http://www.fondsecra
 .team {list-style-type: none; padding: 0 5px; height: 45px; line-height: 45px;white-space: nowrap; overflow: hidden;position: relative;}
 .round-two .matchup {margin:0; height: 300px;padding: 60px 0;}
 .round-three .matchup {margin:0; height: 300px; padding: 180px 0;}
+.round-4 {z-index: 1;position: absolute;}
 .round-details {font-family: 'Roboto Condensed', sans-serif; font-size: 13px; color: #2C7399;text-transform: uppercase;text-align: center;height: 40px;}
+
 .champion li, .round li {background-color: #FFF;box-shadow: none;}
+.team-top-victory {background-color: rgba(205, 235, 235, 0.7); border-radius: 90px;   list-style-type: none;
+    font-size: 210px;text-align: center;margin-left: 200px;
+}
+
 .current li {opacity: 1;}
 .current li.team {background-color: #FFF;box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);opacity: 1;}
 .vote-options {display: block;height: 52px;}
