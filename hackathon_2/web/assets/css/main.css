@@ -149,6 +149,7 @@ a{
 
 .flags {
     height: 140px;
+
 }
 
 div.col-md-3{
@@ -176,3 +177,29 @@ div.img-thumbnail {
     color: rgba(52, 52, 52, 0.81);
     text-decoration: none;
 }
+
+.equipe {
+    font-size: 20px;
+    color: white;
+    text-shadow: black 1px 1px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.toto {
+    text-align: center;
+    width: 400px;
+}
+.engagez {
+    font-size: 25px;
+}
+
+.titre {
+    text-align: center;
+    color: black;
+    text-shadow: black 1px 1px;
+}
+.gladiator {
+    color: red;
+    font-size: 30px;
+}
+>>>>>>> 4455e9b08d249692e906c93911ff326a1608072c
