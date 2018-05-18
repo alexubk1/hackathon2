@@ -25,10 +25,12 @@
         <ul class="matchup">
             {% for country in countries %}
                 {% if loop.index0 is even %}
+            <ul class="matchup">
                     <li class="team team-top">{{ country.name }}</li>
                 {% else %}
                     <li class="team team-bottom">{{ country.name }}</li>
                 {% endif %}
+                </ul>
             {% endfor %}
         </ul>
     </div>	<!-- END ROUND ONE -->
@@ -36,21 +38,23 @@
         <div class="round round-two">
             <div class="round-details">Round 2<br/></div>
             <ul class="matchup">
-            {% for country in sort  %}
-                <li class="team team-top">{{ country.name }}<span class="score">&nbsp;</span></li>
-            </ul>
-            {% endfor %}
 
+            {% for country in sort  %} <br> <br>
+                <li class="team team-top">{{ country.name }}<span class="score">&nbsp;</span></li>
+            {% endfor %}
+            </ul>
         </div><!-- END ROUND TWO -->
 
         <div class="round round-three">
             <div class="round-details">Round 2<br/></div>
             <ul class="matchup">
                 {% for country in final  %}
+                    <br>
+                    <br>
                 <li class="team team-top">{{ country.name }}<span class="score">&nbsp;</span></li>
-            </ul>
-            {% endfor %}
 
+            {% endfor %}
+            </ul>
             <div class="round round-4">
                 <div class="round-details">Round 4<br/></div>
                 <ul class="matchup">

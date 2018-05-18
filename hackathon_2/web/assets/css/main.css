@@ -17,9 +17,9 @@ body {font-family: 'Istok Web', sans-serif;background: url("http://www.fondsecra
 .split-two .round {margin: 0 0 0 2.5%;}
 .matchup {margin:0;width: 100%;padding: 10px 0;-webkit-transition: all 0.2s;transition: all 0.2s;}
 .score {text-transform: uppercase;float: right;color: #2C7399;font-weight: bold;font-family: 'Roboto Condensed', sans-serif;position: absolute;right: 5px;}
-.team {padding: 0 5px;margin: 3px 0;height: 45px; line-height: 45px;white-space: nowrap; overflow: hidden;position: relative;}
-.round-two .matchup {margin:0; height: 125px;padding: 60px 0;}
-.round-three .matchup {margin:0; height: 60px; padding: 180px 0;}
+.team {list-style-type: none; padding: 0 5px; height: 45px; line-height: 45px;white-space: nowrap; overflow: hidden;position: relative;}
+.round-two .matchup {margin:0; height: 300px;padding: 60px 0;}
+.round-three .matchup {margin:0; height: 300px; padding: 180px 0;}
 .round-details {font-family: 'Roboto Condensed', sans-serif; font-size: 13px; color: #2C7399;text-transform: uppercase;text-align: center;height: 40px;}
 .champion li, .round li {background-color: #FFF;box-shadow: none;}
 .current li {opacity: 1;}
