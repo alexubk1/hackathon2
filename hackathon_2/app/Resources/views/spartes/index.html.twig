@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Team : MAORI !</h1>
+    <h1>Team : Sparte!</h1>
 
 
     <div class="row">
@@ -9,9 +9,9 @@
             <table>
                 <tbody>
 
-                {% for gladiator in maori %}
+                {% for gladiator in spartes %}
                     <tr>
-                        <td><a href="{{ path('maori_index') }}">{{ gladiator.name }}</td>
+                        <td><a href="{{ path('spartes_index') }}">{{ gladiator.name }}</td>
                     </tr>
                     <tr>
                         <td>{% if gladiator.captain %}C'est moi le boss{% else %}Je suis soumis{% endif %}</td>
@@ -28,15 +28,18 @@
                 </tbody>
             </table>
         </div>
+
         <div class="col-md-6">
-            <img src="{{ asset('https://media.giphy.com/media/KWAcITxNjZhfO/giphy.gif') }}" alt="haka all blacks" />
+            <img src="{{ asset('https://media.giphy.com/media/J3WUquDgqRpss/giphy.gif') }}" alt="sparte" />
         </div>
+
     </div>
+
     <ul>
         <li>
             <a href="{{ path('gladiator_index') }}">Engagez-vous....qu'ils disaient!</a>
         </li>
-    </ul>
 
+    </ul>
 
 {% endblock %}
