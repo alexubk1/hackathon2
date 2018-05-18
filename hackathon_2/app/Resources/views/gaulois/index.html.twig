@@ -3,31 +3,45 @@
 {% block body %}
     <h1>Team : GAULE !</h1>
 
-    <table>
-        <tbody>
-
-        {% for gladiator in gaulois %}
-            <tr>
-                <td><a href="{{ path('gaulois_index') }}">{{ gladiator.name }}</td>
-            </tr>
-            <tr>
-                <td>{% if gladiator.captain %}C'est moi le boss{% else %}Je suis soumis{% endif %}</td>
-            </tr>
-            <tr>
-                <td>Role : {{ gladiator.job }}</td>
-            </tr>
-            <tr>
-                <td>Arme : {{ gladiator.weapon }}</td>
-            </tr>
-        {% endfor %}
+    <div class="row">
+        <div class="col-md-6">
 
 
-        </tbody>
-    </table>
+            <table>
+                <tbody>
+
+                {% for gladiator in gaulois %}
+                    <tr>
+                        <td><a href="{{ path('gaulois_index') }}">{{ gladiator.name }}</td>
+                    </tr>
+                    <tr>
+                        <td>{% if gladiator.captain %}C'est moi le boss{% else %}Je suis soumis{% endif %}</td>
+                    </tr>
+                    <tr>
+                        <td>Role : {{ gladiator.job }}</td>
+                    </tr>
+                    <tr>
+                        <td>Arme : {{ gladiator.weapon }}</td>
+                    </tr>
+                {% endfor %}
+
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-6">
+            <img src="{{ asset('http://www.gifimili.com/gif/2018/02/asterix-et-obelix-sur-un-bateau.gif') }}" alt="astérix et obélix sur un bateau" />
+        </div>
+    </div>
+
     <ul>
         <li>
             <a href="{{ path('gladiator_index') }}">Engagez-vous....qu'ils disaient!</a>
         </li>
 
     </ul>
+
+
+
 {% endblock %}
