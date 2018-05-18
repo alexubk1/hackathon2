@@ -124,3 +124,27 @@ a{
 .flags {
     height: 60px;
 }
+.equipe {
+    font-size: 20px;
+    color: white;
+    text-shadow: black 1px 1px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.toto {
+    text-align: center;
+    width: 400px;
+}
+.engagez {
+    font-size: 25px;
+}
+
+.titre {
+    text-align: center;
+    color: black;
+    text-shadow: black 1px 1px;
+}
+.gladiator {
+    color: red;
+    font-size: 30px;
+}
