@@ -115,3 +115,6 @@ a{
     font-weight: bold;
     font-size: 20px;
 }
+.flags {
+    height: 60px;
+}

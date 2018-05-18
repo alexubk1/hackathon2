@@ -8,6 +8,7 @@
         {% for country in countries %}
             <tr>
                 <td><a href="{{ path('gaulois_index') }}">{{ country.name }}</td>
+                <td><img class="flags" src="{{ country.flag }}"></td>
             </tr>
         {% endfor %}
         </tbody>

@@ -12,6 +12,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Gladiator
 {
+
+
     /**
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Country", inversedBy="states")
      * @ORM\JoinColumn(nullable=false)
@@ -192,5 +194,29 @@ class Gladiator
     public function getCaptain()
     {
         return $this->captain;
+    }
+
+    /**
+     * Set state.
+     *
+     * @param \AppBundle\Entity\Country $state
+     *
+     * @return Gladiator
+     */
+    public function setState(\AppBundle\Entity\Country $state)
+    {
+        $this->state = $state;
+
+        return $this;
+    }
+
+    /**
+     * Get state.
+     *
+     * @return \AppBundle\Entity\Country
+     */
+    public function getState()
+    {
+        return $this->state;
     }
 }

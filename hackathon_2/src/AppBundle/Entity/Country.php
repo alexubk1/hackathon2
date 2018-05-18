@@ -21,7 +21,6 @@ class Country
      */
     private $states;
 
-
     /**
      * @var int
      *
@@ -44,6 +43,12 @@ class Country
      *
      * @return int
      */
+
+    /**
+     * @ORM\Column(name="flag", type="string", length=255)
+     */
+    private $flag;
+
     public function getId()
     {
         return $this->id;
@@ -114,5 +119,29 @@ class Country
     public function getStates()
     {
         return $this->states;
+    }
+
+    /**
+     * Set flag.
+     *
+     * @param string $flag
+     *
+     * @return Country
+     */
+    public function setFlag($flag)
+    {
+        $this->flag = $flag;
+
+        return $this;
+    }
+
+    /**
+     * Get flag.
+     *
+     * @return string
+     */
+    public function getFlag()
+    {
+        return $this->flag;
     }
 }
